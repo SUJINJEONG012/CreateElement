@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement</title>
+</head>
+
+<body>
+
+    <div>
+        <label for=""><input type="text" id="itemName" />상품명</label>
+        <label for=""><input type="text" id="itemPrice" />상품가격</label>
+        <button type="button" onclick="getValue()">등록</button>
+    </div>
+
+    <div>
+        <ul id="getList">
+
+        </ul>
+    </div>
+
+    <script>
+
+
+        function getValue() {
+            let el = document.createElement("li");
+
+            let arrayList = document.getElementById("itemName").value;
+
+            console.log(arrayList);
+            document.getElementById("getList").appendChild(el).innerText = arrayList;
+        }
+    </script>
+
+</body>
+
+</html>
